@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class MyWidget extends StatelessWidget {
@@ -21,38 +23,56 @@ class MyWidget extends StatelessWidget {
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround, //gap btwn btns
             children: [
               TextButton(
                   style: ButtonStyle(
                       foregroundColor: MaterialStateProperty.all(Colors.red)),
                   onPressed: () {
-                    //log("clicked");
+                    log("clicked on text button");
                   },
                   child: Text('Text Button')),
               TextButton.icon(
                 style: ButtonStyle(
                     foregroundColor: MaterialStateProperty.all(Colors.red)),
                 onPressed: () {
-                  //log("clicked");
+                  log("clicked on text btn with icon");
                 },
                 onLongPress: () {
-                  //log("Longpressed")
+                  log("Longpressed on text btn with icon");
                 },
                 icon: Icon(Icons.home),
                 label: Text("Home"),
               ),
               ElevatedButton(
                 style: ButtonStyle(
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30))),
+                    padding: MaterialStateProperty.all(EdgeInsets.only(
+                        left: 150, right: 150, top: 10, bottom: 10)),
                     foregroundColor: MaterialStateProperty.all(Colors.yellow),
                     backgroundColor: MaterialStateProperty.all(Colors.purple),
-                    minimumSize: MaterialStateProperty.all(Size(10, 10)),
+                    minimumSize: MaterialStateProperty.all(Size(200, 60)),
                     textStyle:
                         MaterialStateProperty.all(TextStyle(fontSize: 20))),
-                onPressed: () {},
+                onPressed: () {
+                  log('clicked on elevated button');
+                },
                 onLongPress: () {},
                 child: Text("Sign in"),
-              )
+              ),
+              OutlinedButton(
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20))),
+                      side: MaterialStateProperty.all(
+                          BorderSide(color: Colors.yellow, width: 5)),
+                      textStyle:
+                          MaterialStateProperty.all(TextStyle(fontSize: 20)),
+                      minimumSize: MaterialStateProperty.all(Size(200, 50)),
+                      foregroundColor: MaterialStateProperty.all(Colors.black)),
+                  onPressed: () {},
+                  child: Text("Sign Up"))
             ],
           ),
         ));
