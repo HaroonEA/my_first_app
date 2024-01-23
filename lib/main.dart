@@ -8,7 +8,11 @@ import 'package:flutter/material.dart';
 //import './widgets/7card.dart';
 //import './widgets/8circle.dart';
 //import './widgets/9card.dart';
-import './widgets/10stateful.dart';
+//import './widgets/10stateful.dart';
+//import './widgets/11drawer.dart';
+//import './widgets/12checkbox.dart';
+//import './widgets/13bottomnavbar.dart';
+import './widgets/14floatbtn.dart';
 
 void main() {
   runApp(const MyApp());
