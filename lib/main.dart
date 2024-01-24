@@ -12,7 +12,13 @@ import 'package:flutter/material.dart';
 //import './widgets/11drawer.dart';
 //import './widgets/12checkbox.dart';
 //import './widgets/13bottomnavbar.dart';
-import './widgets/14floatbtn.dart';
+//import './widgets/14floatbtn.dart';
+//import './widgets/15tab.dart';
+//import './widgets/16radio.dart';
+//import './widgets/17navigation.dart';
+import 'screens/home.dart';
+import 'screens/product.dart';
+import 'screens/about.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +29,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Demo App', home: MyWidget());
+    return MaterialApp(
+      title: 'Demo App',
+      debugShowCheckedModeBanner: false,
+      routes: {
+        '/': (context) => const HomeWidget(),
+        '/product': (context) => const ProductScreen(),
+        '/about': (context) => const AboutScreen(),
+      },
+      initialRoute: '/',
+    );
   }
 }
