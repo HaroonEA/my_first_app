@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/screens/page2.dart';
 //import './widgets/1container.dart';
 //import './widgets/2rowcoloumn.dart';
 //import './widgets/3text.dart';
@@ -16,9 +17,10 @@ import 'package:flutter/material.dart';
 //import './widgets/15tab.dart';
 //import './widgets/16radio.dart';
 //import './widgets/17navigation.dart';
-import 'screens/home.dart';
-import 'screens/product.dart';
-import 'screens/about.dart';
+//import 'screens/home.dart';
+//import 'screens/product.dart';
+//import 'screens/about.dart';
+import 'screens/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,12 +32,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Demo App',
-      debugShowCheckedModeBanner: false,
+      home: SplashWidget(),
+      // title: 'Demo App',
+      debugShowCheckedModeBanner: false, //to remove debug symbol
       routes: {
-        '/': (context) => const HomeWidget(),
-        '/product': (context) => const ProductScreen(),
-        '/about': (context) => const AboutScreen(),
+        //'/': (context) => const SplashWidget(),
+        // '/product': (context) => const ProductScreen(),
+        //'/about': (context) => const AboutScreen(),
+        '/pg2': (context) => Page2(),
       },
       initialRoute: '/',
     );
