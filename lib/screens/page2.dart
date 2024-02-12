@@ -7,13 +7,13 @@ class Page2 extends StatelessWidget {
       appBar: AppBar(
         title: Text("Page 2"),
       ),
-      backgroundColor: Colors.white, // Set your product screen background color
+      backgroundColor: Colors.white,
       body: Stack(
         fit: StackFit.expand,
         children: [
           // Background Image
           Image.asset(
-            'images/city.png', // Replace with your image URL
+            'images/city.png',
             fit: BoxFit.cover,
           ),
           // Content

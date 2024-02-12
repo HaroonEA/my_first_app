@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'page1.dart';
+import 'package:my_first_app/screens/menu.dart';
 
 class SplashWidget extends StatefulWidget {
   @override
@@ -12,11 +12,10 @@ class _SplashWidgetState extends State<SplashWidget> {
   void initState() {
     super.initState();
 
-    // Delay for 3 seconds (adjust as needed)
     Timer(Duration(seconds: 6), () {
-      // Navigate to the ProductWidget after splash duration
+      // Navigate to the page1 after splash duration
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => page1(),
+        builder: (context) => MenuScreen(),
       ));
     });
   }

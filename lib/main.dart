@@ -20,7 +20,8 @@ import 'package:my_first_app/screens/page2.dart';
 //import 'screens/home.dart';
 //import 'screens/product.dart';
 //import 'screens/about.dart';
-import 'screens/splash.dart';
+//import 'screens/splash.dart';
+import 'package:my_first_app/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashWidget(),
+      home: MenuScreen(),
       // title: 'Demo App',
       debugShowCheckedModeBanner: false, //to remove debug symbol
       routes: {
